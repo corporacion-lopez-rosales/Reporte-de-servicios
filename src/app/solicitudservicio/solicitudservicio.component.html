@@ -1,0 +1,18 @@
+<div class="row ">
+  <div class="col-2">
+    <img src="../img/icono-servitek-2.png" alt="">
+  </div>
+  <div class="col-8 formulario justify-content-between">
+    <form valid action="">
+      <select matNativeControl placeholder="Opciones" name="opcioness" [(ngModel)]="selectedOpcion">
+        <option *ngFor="let opcion of opc" [value]="opcion.name">{{opcion.name}}</option>
+      </select>
+      
+    </form>
+    <button class="">Gurdar Cliente</button>
+    <button>Buscar cliente</button>
+  </div>
+  <div class="col-2">
+    <img src="../img/icono-servitek-2.png" alt="">
+  </div>
+</div>

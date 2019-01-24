@@ -1,0 +1,30 @@
+<div class="body container ">
+  <div class="title row">
+    <h2>Prueba de servicios</h2>
+  </div>
+  <!-- <div class="content row">
+    <button>Buscar cliente</button>
+  </div> -->
+  <div class="row ">
+    <div class="col-2">
+      <img src="../img/icono-servitek-2.png" alt="">
+    </div>
+    <div class="col-8 formulario justify-content-between">
+      <form valid action="">
+        <input class="input 1 col-12" type="text" placeholder="Nombre Cliente"  required >
+        <input class="input 1 col-6" type="text" placeholder="Contacto"   required>
+        <input class="input 1 col-6" type="text" placeholder="Tel. Oficina"   required>
+        <input class="input 1 col-12" type="text" placeholder="Direccion"  required>
+      </form>
+      <button class="">Gurdar Cliente</button>
+      <button>Buscar cliente</button>
+    </div>
+    <div class="col-2">
+      <img src="../img/icono-servitek-2.png" alt="">
+    </div>
+  </div>
+  <div *ngIf="show" >
+    <app-solicitudservicio></app-solicitudservicio>
+  </div>
+
+</div>
