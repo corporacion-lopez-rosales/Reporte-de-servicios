@@ -1,18 +1,62 @@
-<div class="row ">
-  <div class="col-2">
-    <img src="../img/icono-servitek-2.png" alt="">
-  </div>
-  <div class="col-8 formulario justify-content-between">
-    <form valid action="">
-      <select matNativeControl placeholder="Opciones" name="opcioness" [(ngModel)]="selectedOpcion">
-        <option *ngFor="let opcion of opc" [value]="opcion.name">{{opcion.name}}</option>
-      </select>
-      
+<div class="row justify-content-center ">
+  <div class="col-8 formulario justify-content-around">
+    <form class="form-group ">
+      <div class="row justify-content-between d-flex  ">
+        <input class="col-5 form-control " type="number" id="consecutivo" placeholder="Consecutivo" value="Consecutivo">
+        <select class="col-5 custom-select " placeholder="Opciones" name="opcioness" [(ngModel)]="selectedOpcion">
+          <option *ngFor="let opcion of opc" [value]="opcion.name">{{opcion.name}}</option>
+        </select>
+      </div>
+      <div class="row justify-content-between ">
+        <div class="col-5 py-1 mt-1 border border-dark rounded " >
+          <label class="d-block" for="checkbox1_value">Le vendimos nosotros el equipo</label>
+          <input type="checkbox" value="Si" name="checkbox1_value" id="">Si<br>
+          <input type="checkbox" value="No" name="checkbox1_value" id="">No<br>
+        </div>
+        <div class="col-5 py-1 mt-1 border border-dark rounded " >
+          <label class="d-block" for="">Le instalamos nosotros el equipo</label>
+          <input type="checkbox" value="Si" name="Si" id="">Si<br>
+          <input type="checkbox" value="No" name="No" id="">No<br>
+        </div>
+        <div class="col-5 py-1 mt-1 border border-dark rounded " >
+          <label for="" class="d-block" >Garantia</label>
+          <input type="checkbox" value="Si" name="Si" id="">Si<br>
+          <input type="checkbox" value="No" name="No" id="">No<br>
+        </div>
+        <div class="col-5 py-1 mt-1 border border-dark rounded " >
+          <label for="" class="d-block" >Nivel de molestia</label>
+          <input type="checkbox" value="Nada" name="Si" id="">Nada<br>
+          <input type="checkbox" value="Poco" name="No" id="">Poco<br>
+          <input type="checkbox" value="Mucho" name="No" id="">Mucho<br>
+        </div>
+      </div>
+      <div class="row justify-content-between ">
+        <input class="col-5 mt-1 form-control" type="text" id="consecutivo" placeholder="Consecutivo" >
+        <input class="col-5 mt-1 form-control " type="date" name="" id="">
+      </div>  
+      <div class="row pt-1 justify-content-between">
+        <input  class="mb-1 form-control col-5 " type="text" placeholder="Marca">
+        <input  class="mb-1 form-control col-3 " type="text" placeholder="Serie">
+          <input  class="mb-1 form-control col-3 " type="text" placeholder="Modelo del quipo">
+        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Descripcion del proyecto" rows="3"></textarea>
+      </div>
+      <div class="row justify-content-between" >
+        <div>
+          <label class="d-block" for=""> Seleccione uno </label>
+          <input type="checkbox" name="" id=""> EN CASO DE GARANTÍA<br>
+          <input *ngIf="show" class="col-5 mt-1 form-control " type="date" name="" id="">
+          <input type="checkbox" name="" id=""> EN CASO DE GARANTÍA Y SI SE VENDIÓ EL EQUIPO<br>
+          <input *ngIf="show" class="col-5 mt-1 form-control " type="Number" name="" id="" placeholder="# Factura" > 
+        </div>
+      </div>
     </form>
-    <button class="">Gurdar Cliente</button>
-    <button>Buscar cliente</button>
-  </div>
-  <div class="col-2">
-    <img src="../img/icono-servitek-2.png" alt="">
+    <div class="row justify-content-between ">
+      <div class="col-5 text-center " >
+         <button class="btn btn-outline-secondary">Gurdar Cliente</button>
+      </div>
+       <div class="col-5 text-center " >
+        <button class="btn btn-outline-secondary" >Buscar cliente</button>
+       </div>
+    </div>
   </div>
 </div>

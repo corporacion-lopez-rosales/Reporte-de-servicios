@@ -15,7 +15,3 @@ export class Form1Component implements OnInit {
   }
 }
 
-
-$(document).ready(function () {
-  alert("funciona");
-}); 

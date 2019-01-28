@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 import { opciones } from "../mock-opciones";
 import { Opcion } from '../opciones';
 
@@ -11,8 +10,10 @@ import { Opcion } from '../opciones';
 })
 export class SolicitudservicioComponent implements OnInit {
   selectedOpcion: string;
+  show: boolean = true;
   constructor() { }
   opc = opciones;
+  
   ngOnInit() {
     console.log(this.opc);
   }

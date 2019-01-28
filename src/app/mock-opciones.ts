@@ -7,3 +7,11 @@ export const opciones: Opcion[] =[
     { id: 4, name: 'Reparacion' },
     { id: 5, name: 'Revision, Diagnostico si procede garantia reparar, si no procede cotizar' }
 ]
+
+export const Cliente: Opcion[] = [
+    {id:0, name: '--------'},
+    { id: 1, name: 'Mala' },
+    { id: 2, name: 'Buena' },
+    { id: 3, name: 'Exelente' }
+]
+

@@ -1,14 +1,11 @@
 <div class="body container ">
-  <div class="title row">
+  <div class="title row justify-content-center ">
     <h2>Prueba de servicios</h2>
   </div>
   <!-- <div class="content row">
     <button>Buscar cliente</button>
   </div> -->
-  <div class="row ">
-    <div class="col-2">
-      <img src="../img/icono-servitek-2.png" alt="">
-    </div>
+  <div class="row justify-content-center ">
     <div class="col-8 formulario justify-content-between">
       <form valid action="">
         <input class="input 1 col-12" type="text" placeholder="Nombre Cliente"  required >
@@ -19,12 +16,15 @@
       <button class="">Gurdar Cliente</button>
       <button>Buscar cliente</button>
     </div>
-    <div class="col-2">
-      <img src="../img/icono-servitek-2.png" alt="">
-    </div>
   </div>
-  <div *ngIf="show" >
+<div *ngIf="show" class="pb-2">
     <app-solicitudservicio></app-solicitudservicio>
+  </div>
+   <div *ngIf="show" class="pt-2 pb-2" >
+<app-modolutecnico></app-modolutecnico>
+  </div>
+    <div *ngIf="show" class="pt-2" >
+<app-modulocostoyfactura></app-modulocostoyfactura>
   </div>
 
 </div>
