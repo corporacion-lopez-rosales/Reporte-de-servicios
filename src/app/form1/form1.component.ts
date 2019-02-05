@@ -14,4 +14,3 @@ export class Form1Component implements OnInit {
   ngOnInit() {
   }
 }
-

@@ -2,23 +2,26 @@
   <div class="col-8 formulario justify-content-around" >
     <form class="form-group ">
     <div class="row justify-content-between">
-      <input name="" id="" class="col-5 form-control mt-1 " type="text" value="" placeholder="Nombre del proveedor de servicio">
-      <input name="" id="" class="col-5 form-control mt-1 " type="text" value="" placeholder="Costo refacciones">
-      <input name="" id="" class="col-5 form-control mt-1 " type="text" value="" placeholder="Costo total para cobrar al cliente">
-      <select class="col-5 custom-select mt-1 " placeholder="Opciones" name="opcioness" [(ngModel)]="selectedOpcion">
-          <option *ngFor="let opcion of opc" [value]="opcion.name">{{opcion.name}}</option>
-        </select>
-
-      <textarea class="form-control mt-1" id="exampleFormControlTextarea1" placeholder="Descripción del reporte de servicio de lo que se hizo y esta descripción se usa para facturar el servicio al cliente" rows="3"></textarea>
+      <mat-form-field class="example-full-width col-5 mb-1">
+        <input matInput placeholder="Nombre del provedor de servicio" value="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width col-5 mb-1">
+        <input matInput placeholder="Costo de refacciones" value="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width col-5 mb-1">
+        <input matInput placeholder="Costo total para cobrar al cliente" value="">
+      </mat-form-field>
+      <mat-form-field class="col-7" >
+        <mat-select placeholder="Satisfaccion del cliente">
+          <mat-option *ngFor="let opcion of opc" [value]="opcion.name">
+            {{opcion.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-full-width col-12">
+        <textarea matInput placeholder="Descripción del reporte de servicio de lo que se hizo y esta descripción se usa para facturar el servicio al cliente"></textarea>
+      </mat-form-field>
     </div>
   </form>
-    <div class="row justify-content-between ">
-      <div class="col-5 text-center " >
-        <button class="btn btn-outline-danger">Gurdar Cliente</button>
-      </div>
-      <div class="col-5 text-center " >
-        <button class="btn btn-outline-danger" >Buscar cliente</button>
-      </div>
-  </div>
   </div>
 </div>

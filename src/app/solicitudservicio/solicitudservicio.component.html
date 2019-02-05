@@ -2,61 +2,94 @@
   <div class="col-8 formulario justify-content-around">
     <form class="form-group ">
       <div class="row justify-content-between d-flex  ">
-        <input class="col-5 form-control " type="number" id="consecutivo" placeholder="Consecutivo" value="Consecutivo">
-        <select class="col-5 custom-select " placeholder="Opciones" name="opcioness" [(ngModel)]="selectedOpcion">
-          <option *ngFor="let opcion of opc" [value]="opcion.name">{{opcion.name}}</option>
-        </select>
+         <mat-form-field class="example-full-width col-4">
+          <input matInput placeholder="No. Reportes Anteriores" >
+        </mat-form-field>
+         <mat-form-field class="example-full-width col-4">
+          <input matInput placeholder="Cantidad de revisiones que lleva" >
+        </mat-form-field>
+        <mat-form-field class="col-7" >
+          <mat-select placeholder="Favorite food">
+            <mat-option *ngFor="let opcion of opc" [value]="opcion.name">
+              {{opcion.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="example-full-width col-4">
+          <input matInput placeholder="Consecutivo" >
+        </mat-form-field>
       </div>
       <div class="row justify-content-between ">
         <div class="col-5 py-1 mt-1 border border-dark rounded " >
           <label class="d-block" for="checkbox1_value">Le vendimos nosotros el equipo</label>
-          <input type="checkbox" value="Si" name="checkbox1_value" id="">Si<br>
-          <input type="checkbox" value="No" name="checkbox1_value" id="">No<br>
+          <mat-radio-group>
+            <mat-radio-button value="1">Si</mat-radio-button><br>
+            <mat-radio-button value="2">No</mat-radio-button><br>
+          </mat-radio-group>
         </div>
         <div class="col-5 py-1 mt-1 border border-dark rounded " >
           <label class="d-block" for="">Le instalamos nosotros el equipo</label>
-          <input type="checkbox" value="Si" name="Si" id="">Si<br>
-          <input type="checkbox" value="No" name="No" id="">No<br>
+         <mat-radio-group>
+            <mat-radio-button value="1">Si</mat-radio-button><br>
+            <mat-radio-button value="2">No</mat-radio-button><br>
+          </mat-radio-group>
         </div>
         <div class="col-5 py-1 mt-1 border border-dark rounded " >
           <label for="" class="d-block" >Garantia</label>
-          <input type="checkbox" value="Si" name="Si" id="">Si<br>
-          <input type="checkbox" value="No" name="No" id="">No<br>
+          <mat-radio-group>
+            <mat-radio-button value="1">Si</mat-radio-button><br>
+            <mat-radio-button value="2">No</mat-radio-button><br>
+          </mat-radio-group>
         </div>
         <div class="col-5 py-1 mt-1 border border-dark rounded " >
           <label for="" class="d-block" >Nivel de molestia</label>
-          <input type="checkbox" value="Nada" name="Si" id="">Nada<br>
-          <input type="checkbox" value="Poco" name="No" id="">Poco<br>
-          <input type="checkbox" value="Mucho" name="No" id="">Mucho<br>
+         <mat-radio-group>
+            <mat-radio-button value="1">Nada</mat-radio-button><br>
+            <mat-radio-button value="2">Poco</mat-radio-button><br>
+            <mat-radio-button value="3">Mucho</mat-radio-button><br>
+          </mat-radio-group>
         </div>
       </div>
-      <div class="row justify-content-between ">
-        <input class="col-5 mt-1 form-control" type="text" id="consecutivo" placeholder="Consecutivo" >
-        <input class="col-5 mt-1 form-control " type="date" name="" id="">
-      </div>  
       <div class="row pt-1 justify-content-between">
-        <input  class="mb-1 form-control col-5 " type="text" placeholder="Marca">
-        <input  class="mb-1 form-control col-3 " type="text" placeholder="Serie">
-          <input  class="mb-1 form-control col-3 " type="text" placeholder="Modelo del quipo">
-        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Descripcion del proyecto" rows="3"></textarea>
+        <mat-form-field class="example-full-width col-3 mb-1">
+            <input matInput placeholder="Marca" value="">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-3 mb-1">
+            <input matInput placeholder="Serie" value="">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-3 mb-1">
+            <input matInput placeholder="Modelo de equipo" value="">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-4 mb-1">
+            <input matInput placeholder="Descripcion del equipo" value="">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-4 mb-1">
+            <input matInput placeholder="Levanta Reporte" value="">
+          </mat-form-field>
+          
+          <mat-form-field class="example-full-width col-5 mb-1">
+            <input matInput placeholder="Falla del reporte del cliente" value="">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-6 mb-1">
+            <input matInput placeholder="Requisitos para dar el servicio" value="">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-5 mb-1 ">
+            <input matInput [matDatepicker]="picker" placeholder="Fecha promesa">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+           <mat-form-field class="example-full-width col-12 mb-1">
+            <input matInput placeholder="Obs" value="">
+          </mat-form-field>
       </div>
       <div class="row justify-content-between" >
         <div>
-          <label class="d-block" for=""> Seleccione uno </label>
-          <input type="checkbox" name="" id=""> EN CASO DE GARANTÍA<br>
-          <input *ngIf="show" class="col-5 mt-1 form-control " type="date" name="" id="">
-          <input type="checkbox" name="" id=""> EN CASO DE GARANTÍA Y SI SE VENDIÓ EL EQUIPO<br>
-          <input *ngIf="show" class="col-5 mt-1 form-control " type="Number" name="" id="" placeholder="# Factura" > 
+          <mat-radio-group>
+            <mat-radio-button value="1">En caso de garantia</mat-radio-button><br> <input *ngIf="show" class="col-5 mt-1 form-control " type="date" name="" id=""><br>
+            <mat-radio-button value="2">EN CASO DE GARANTÍA Y SI SE VENDIÓ EL EQUIPO</mat-radio-button><input *ngIf="show" class="col-5 mt-1 form-control " type="Number" name="" id="" placeholder="# Factura" ><br> 
+          </mat-radio-group>
         </div>
       </div>
     </form>
-    <div class="row justify-content-between ">
-      <div class="col-5 text-center " >
-        <button class="btn btn-outline-danger">Gurdar Cliente</button>
-      </div>
-       <div class="col-5 text-center " >
-        <button class="btn btn-outline-danger">Buscar cliente</button>
-       </div>
-    </div>
   </div>
 </div>

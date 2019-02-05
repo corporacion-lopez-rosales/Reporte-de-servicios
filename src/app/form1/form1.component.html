@@ -1,30 +1,48 @@
 <div class="body container ">
-  <div class="title row justify-content-center ">
+  <div class="title row justify-content-center pt-3">
     <h2>Prueba de servicios</h2>
   </div>
+  
   <!-- <div class="content row">
     <button>Buscar cliente</button>
   </div> -->
-  <div class="row justify-content-center ">
-    <div class="col-8 formulario justify-content-between">
-      <form valid action="">
-        <input class="input 1 col-12" type="text" placeholder="Nombre Cliente"  required >
-        <input class="input 1 col-6" type="text" placeholder="Contacto"   required>
-        <input class="input 1 col-6" type="text" placeholder="Tel. Oficina"   required>
-        <input class="input 1 col-12" type="text" placeholder="Direccion"  required>
+  <div class="row justify-content-center pb-2 ">
+    <div class="col-8 formulario justify-content-around">
+      <form class="form-group ">
+        <div class="row justify-content-between">
+          <mat-form-field class="example-full-width col-12">
+            <input matInput placeholder="Nombre Cliente" value="">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-5">
+            <input matInput placeholder="Contacto" value="">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-5">
+            <input matInput placeholder="Tel. Oficina" value="">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-12">
+            <input matInput placeholder="Direccion" value="">
+          </mat-form-field>
+        </div>
       </form>
-      <button class="">Gurdar Cliente</button>
-      <button>Buscar cliente</button>
     </div>
   </div>
-<div *ngIf="show" class="pb-2">
+  <div *ngIf="show" class="pb-2 pt-2 borde-top">
     <app-solicitudservicio></app-solicitudservicio>
   </div>
-   <div *ngIf="show" class="pt-2 pb-2" >
-<app-modolutecnico></app-modolutecnico>
+  <div *ngIf="show" class="pt-2 pb-2 borde-top">
+    <app-modolutecnico></app-modolutecnico>
   </div>
-    <div *ngIf="show" class="pt-2" >
-<app-modulocostoyfactura></app-modulocostoyfactura>
+  <div *ngIf="show" class="pt-2 borde-top">
+    <app-modulocostoyfactura></app-modulocostoyfactura>
   </div>
-
+<div class="col-8 formulario justify-content-around m-auto">
+<div class="row justify-content-between ">
+  <div class="col-5 text-center ">
+    <button class="btn btn-outline-danger">Guardar</button>
+  </div>
+  <div class="col-5 text-center ">
+    <button class="btn btn-outline-danger">Canelar</button>
+  </div>
+</div>
+</div>
 </div>

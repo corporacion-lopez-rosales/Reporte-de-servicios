@@ -11,6 +11,10 @@ import { SolicitudservicioComponent } from './solicitudservicio/solicitudservici
 import { CostosyfacturasComponent } from './costosyfacturas/costosyfacturas.component';
 import { ModolutecnicoComponent } from './modolutecnico/modolutecnico.component';
 import { ModulocostoyfacturaComponent } from './modulocostoyfactura/modulocostoyfactura.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatNativeDateModule, MatDatepickerModule, MatInputModule, MatSelectModule, MatOptionModule, MatRadioModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -20,13 +24,27 @@ import { ModulocostoyfacturaComponent } from './modulocostoyfactura/modulocostoy
     SolicitudservicioComponent,
     CostosyfacturasComponent,
     ModolutecnicoComponent,
-    ModulocostoyfacturaComponent
+    ModulocostoyfacturaComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
+    MatInputModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
