@@ -1,0 +1,68 @@
+<div class="body container bg-light ">
+  <div class="title row justify-content-center pt-3">
+    <h2>Dashboard</h2>
+  </div>
+<mat-form-field class="col-12">
+   <input matInput color="accent" (keyup)="applyFilter($event.target.value)" placeholder="Filtro">
+  </mat-form-field>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 col-12">
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> id </th>
+      <td mat-cell *matCellDef="let Reportes"> {{Reportes.id}} </td>
+    </ng-container>
+
+    <!-- Consecutivo Column -->
+    <ng-container matColumnDef="Consecutivo">
+      <th mat-header-cell *matHeaderCellDef> Consecutivo </th>
+      <td mat-cell *matCellDef="let Reportes"> {{Reportes.Consecutivo}} </td>
+    </ng-container>
+
+    <!-- Solicitud Column -->
+    <ng-container matColumnDef="Solicitud">
+      <th mat-header-cell *matHeaderCellDef> Solicitud </th>
+      <td mat-cell *matCellDef="let Reportes"> {{Reportes.Solicitud}} </td>
+    </ng-container>
+
+    <!-- Vendimos Column -->
+    <ng-container matColumnDef="Vendimos">
+      <th mat-header-cell *matHeaderCellDef> Vendimos </th>
+      <td mat-cell *matCellDef="let Reportes"> {{Reportes.Vendimos}} </td>
+    </ng-container>
+
+    <!-- Garantia Column -->
+    <ng-container matColumnDef="Garantia">
+      <th mat-header-cell *matHeaderCellDef> Garantia </th>
+      <td mat-cell *matCellDef="let Reportes"> {{Reportes.Garantia}} </td>
+    </ng-container>
+
+    <!-- Contacto Column -->
+    <ng-container *ngIf="show" matColumnDef="Contacto">
+      <th mat-header-cell *matHeaderCellDef> Contacto </th>
+      <td mat-cell *matCellDef="let Reportes"> {{Reportes.Contacto}} </td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="Actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let Reportes">
+        <button mat-button [matMenuTriggerFor]="menu"  routerLink="/home"  ><i class="material-icons">
+            more_vert
+          </i></button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item class="text-center" (click)="Prueba(Reportes)"><i class="material-icons">
+              edit
+            </i></button>
+          <button mat-menu-item class="text-center"><i class="material-icons">
+              delete
+            </i></button>
+        </mat-menu>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="Prueba()" class="hola"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[10, 15, 20]" showFirstLastButtons></mat-paginator>
+</div>

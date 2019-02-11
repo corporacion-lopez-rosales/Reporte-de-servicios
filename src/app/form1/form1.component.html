@@ -27,14 +27,100 @@
     </div>
   </div>
   <div *ngIf="show" class="pb-2 pt-2 borde-top">
-    <app-solicitudservicio></app-solicitudservicio>
+    <div class="row justify-content-center ">
+  <div class="col-8 formulario justify-content-around">
+    <form class="form-group ">
+      <div class="row justify-content-between d-flex  ">
+         <mat-form-field class="example-full-width col-4">
+          <input matInput placeholder="No. Reportes Anteriores" >
+        </mat-form-field>
+         <mat-form-field class="example-full-width col-4">
+          <input matInput placeholder="Cantidad de revisiones que lleva" >
+        </mat-form-field>
+<mat-form-field class="example-full-width col-5">
+  <input matInput placeholder="Vendedor">
+</mat-form-field>
+        <mat-form-field class="example-full-width col-4">
+          <input matInput placeholder="Consecutivo" >
+        </mat-form-field>
+      </div>
+      <div class="row justify-content-between ">
+        <div class="col-5 py-1 mt-1 border border-dark rounded " >
+          <label class="d-block" for="checkbox1_value">Le vendimos nosotros el equipo</label>
+          <mat-radio-group>
+            <mat-radio-button value="1">Si</mat-radio-button><br>
+            <mat-radio-button value="2">No</mat-radio-button><br>
+          </mat-radio-group>
+        </div>
+        <div class="col-5 py-1 mt-1 border border-dark rounded " >
+          <label class="d-block" for="">Le instalamos nosotros el equipo</label>
+         <mat-radio-group>
+            <mat-radio-button value="1">Si</mat-radio-button><br>
+            <mat-radio-button value="2">No</mat-radio-button><br>
+          </mat-radio-group>
+        </div>
+        <div class="col-5 py-1 mt-1 border border-dark rounded " >
+          <label for="" class="d-block" >Garantia</label>
+          <mat-radio-group>
+            <mat-radio-button value="1">Si</mat-radio-button><br>
+            <mat-radio-button value="2">No</mat-radio-button><br>
+          </mat-radio-group>
+        </div>
+        <div class="col-5 py-1 mt-1 border border-dark rounded " >
+          <label for="" class="d-block" >Nivel de molestia</label>
+         <mat-radio-group>
+            <mat-radio-button value="1">Nada</mat-radio-button><br>
+            <mat-radio-button value="2">Poco</mat-radio-button><br>
+            <mat-radio-button value="3">Mucho</mat-radio-button><br>
+          </mat-radio-group>
+        </div>
+      </div>
+      <div class="row pt-1 justify-content-between">
+        <mat-form-field class="example-full-width col-3 mb-1">
+            <input matInput placeholder="Marca" value="">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-3 mb-1">
+            <input matInput placeholder="Serie" value="">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-3 mb-1">
+            <input matInput placeholder="Modelo de equipo" value="">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-4 mb-1">
+            <input matInput placeholder="Descripcion del equipo" value="">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-4 mb-1">
+            <input matInput placeholder="Levanta Reporte" value="">
+          </mat-form-field>
+          
+          <mat-form-field class="example-full-width col-5 mb-1">
+            <input matInput placeholder="Falla del reporte del cliente" value="">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-6 mb-1">
+            <input matInput placeholder="Requisitos para dar el servicio" value="">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-5 mb-1 ">
+            <input matInput [matDatepicker]="picker" placeholder="Fecha promesa">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field class="example-full-width col-5 mb-1 ">
+              <input matInput [matDatepicker]="pick" placeholder="Fecha Reporte">
+              <mat-datepicker-toggle matSuffix [for]="pick"></mat-datepicker-toggle>
+              <mat-datepicker #pick></mat-datepicker>
+            </mat-form-field>
+          
+           <mat-form-field class="example-full-width col-12 mb-1">
+            <input matInput placeholder="Obs" value="">
+          </mat-form-field>
+      </div>
+    </form>
+  </div>
+</div>
   </div>
   <div *ngIf="show" class="pt-2 pb-2 borde-top">
     <app-modolutecnico></app-modolutecnico>
   </div>
-  <div *ngIf="show" class="pt-2 borde-top">
-    <app-modulocostoyfactura></app-modulocostoyfactura>
-  </div>
+
 <div class="col-8 formulario justify-content-around m-auto">
 <div class="row justify-content-between ">
   <div class="col-5 text-center ">

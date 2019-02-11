@@ -6,12 +6,9 @@
         <input matInput placeholder="Nombre del provedor de servicio" value="">
       </mat-form-field>
       <mat-form-field class="example-full-width col-5 mb-1">
-        <input matInput placeholder="Costo de refacciones" value="">
+        <input matInput placeholder="Pendiente" value="">
       </mat-form-field>
-      <mat-form-field class="example-full-width col-5 mb-1">
-        <input matInput placeholder="Costo total para cobrar al cliente" value="">
-      </mat-form-field>
-      <mat-form-field class="col-7" >
+      <mat-form-field class="col-5" >
         <mat-select placeholder="Satisfaccion del cliente">
           <mat-option *ngFor="let opcion of opc" [value]="opcion.name">
             {{opcion.name}}
@@ -21,7 +18,36 @@
       <mat-form-field class="example-full-width col-12">
         <textarea matInput placeholder="Descripción del reporte de servicio de lo que se hizo y esta descripción se usa para facturar el servicio al cliente"></textarea>
       </mat-form-field>
+      <mat-form-field class="example-full-width col-12">
+        <textarea matInput placeholder="Diagnostico del tecnico"></textarea>
+      </mat-form-field>
     </div>
   </form>
   </div>
+</div>
+<div class="pt-2 borde-top">
+<div class="row justify-content-center pt-2 ">
+  <div class="col-8 formulario justify-content-between">
+    <form class="form-group ">
+      <div class="row justify-content-center">
+        <mat-form-field class="example-full-width col-5 mb-1">
+          <input matInput placeholder="Cunto nos cobro el cliente" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width col-5 mb-1">
+          <input matInput placeholder="Costo de refacciones" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width col-5 mb-1">
+          <input matInput placeholder="Costo total para cobrar al cliente" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width col-5 mb-1">
+          <input matInput placeholder="Utilidad" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width col-5 mb-1">
+          <input matInput placeholder="Precio de venta al cliente" value="">
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+</div>
+
 </div>
