@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Cliente } from "../mock-opciones";
+import { Cliente } from "../../mock-opciones";
 
 @Component({
   selector: 'app-modolutecnico',

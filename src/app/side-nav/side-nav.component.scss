@@ -7,8 +7,11 @@
   left: 0;
   right: 0;
 }
+.menu{
+  color:#ffffff;
+}
 .toolbar{
- background: rgb(103, 103, 103);
+background: #494949;
 }
 .mobile .toolbar {
   position: fixed;
@@ -18,10 +21,10 @@
 .expanded-nav {
 border-right: 2px solid ;
     background: rgb(242, 242, 242);
-box-shadow: 5px 1px 9px 1px #353535;
+    box-shadow: 5px -1px 1px 0px 
 }
 .sidenav-container {
-  background: rgba(118, 118, 118, 0.74);
+  //background: rgba(118, 118, 118, 0.74);
   flex: 1;
 }
 
@@ -33,5 +36,5 @@ box-shadow: 5px 1px 9px 1px #353535;
       color: white;
 }
 .body{
-    //background: rgba(168, 168, 168, 0.46);
+       background: #993333;
 }

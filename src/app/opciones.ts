@@ -5,8 +5,12 @@ export class Opcion {
 export interface ReporteServicio {
     id: number;
     Consecutivo: string;
-    Solicitud: string;
-    Vendimos: string;
-    Garantia: string;
-    Contacto: String;
+    Num_reportes: string;
+    Cliente: string;
+    falla: string;
+    levanta_report: String;
+    Nombre_prov: String;
+    Modelo: String;
+    Marca: String;
+    Fecha_report: Number;
 }

@@ -1,8 +1,35 @@
 .mat-form-field:hover {
     
 }
+*{
+    
+}
 .body{
     border-left: 2px solid black;
     border-right: 2px solid black;
     height: 100%;
+    background: white;
+}
+
+.mat-edit{
+    padding: 5px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.mat-delete{
+    padding: 5px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.mat-delete:hover{
+        transition: .3s;
+    background: red;
+    color: white;
+}
+.mat-edit:hover {
+    transition: .3s;
+     background: #ffdf00;
+  color: white;
 }

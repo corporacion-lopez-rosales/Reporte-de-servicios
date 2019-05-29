@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { opciones } from "../mock-opciones";
-import { Opcion } from '../opciones';
+import { opciones } from "../../mock-opciones";
+import { Opcion } from '../../opciones';
 
 @Component({
   selector: 'app-solicitudservicio',
