@@ -18,4 +18,7 @@ export class SideNavComponent {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
+  
+    
+  
 }

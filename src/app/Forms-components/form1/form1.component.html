@@ -10,17 +10,28 @@
     <div class="col-8 formulario justify-content-around">
       <form class="form-group ">
         <div class="row justify-content-between">
+         
+                    <mat-form-field class="example-full-width col-12">
+            <input id="contacto_1" type="text" placeholder="Contacto" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto"  [(ngModel)]="art.contacto"  >
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="xdd()">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          
           <mat-form-field class="example-full-width col-12">
             <input matInput placeholder="Nombre Cliente" value="" [(ngModel)]="art.nombre_cliente" name="name1">
           </mat-form-field>
+
           <mat-form-field class="example-full-width col-5">
-            <input matInput placeholder="Contacto" value="" [(ngModel)]="art.contacto" name="name2" >
-          </mat-form-field>
-          <mat-form-field class="example-full-width col-5">
-            <input matInput placeholder="Tel. Oficina" value="" [(ngModel)]="art.telefono" name="name3">
+            <input matInput placeholder="Tel. Oficina" value="" [(ngModel)]="art.telefono" name="name2">
           </mat-form-field>
           <mat-form-field class="example-full-width col-12">
-            <input matInput placeholder="Direccion" value="" [(ngModel)]="art.direccion" name="name4">
+            <input matInput placeholder="Direccion" value="" [(ngModel)]="art.direccion" name="name3">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-12">
+            <input matInput placeholder="Correo" value="" [(ngModel)]="art.correo" name="name4">
           </mat-form-field>
         </div>
       </form>
@@ -180,7 +191,7 @@
       <button class="btn btn-outline-danger" (click)="actualizar()">Editar</button>
     </div>
     <div class="col-5 text-center ">
-      <button class="btn btn-outline-danger">Cancelar</button>
+      <button id="p_auto" class="btn btn-outline-danger" >Cancelar</button>
     </div>
   </div>
   </div>

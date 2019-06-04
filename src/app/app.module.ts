@@ -16,6 +16,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatMenuModule, Mat
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {HttpClientModule} from '@angular/common/http';
 import {NavService} from './nav.service';
+import {MatAutocompleteModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,8 @@ import {NavService} from './nav.service';
     MatRadioModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatAutocompleteModule,
+    
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,

@@ -12,6 +12,8 @@ export class NavService {
   public urlactualizar='https://servitek.clrswap.com/proy-servicios/index.php/Controlador2/';
   public urleliminar='https://servitek.clrswap.com/proy-servicios/index.php/Controlador3/';
 
+  public urlautocomplete='https://servitek.clrswap.com/proy-servicios/index.php/Controlador4/';
+
   constructor(private http: HttpClient) { }
   flag;
   Rep;
@@ -45,4 +47,13 @@ export class NavService {
   eliminar(id: number){
     return this.http.get(`${this.urleliminar}eliminar.php?id=${id}`);
   }
+
+  autocomplete(){
+    return this.http.get(`${this.urlautocomplete}autocomplete.php`);
+  }
+
+
+
+  
+
 }
