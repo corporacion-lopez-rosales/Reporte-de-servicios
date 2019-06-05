@@ -19,6 +19,7 @@ import { Router, RouterLink } from '@angular/router';
 export class Form1Component implements OnInit {
 
  
+
    dateDay = new Date();
 
 
@@ -213,6 +214,7 @@ export class Form1Component implements OnInit {
   }
   
   actualizar() {
+    
     this.navServicio.actualizar(this.art).subscribe(datos => {
       if (datos['resultado']=='OK') {
         alert(datos['mensaje']);
