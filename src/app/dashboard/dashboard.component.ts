@@ -57,7 +57,13 @@ informacion: null;
     costo_ref: null,
     costo_cobrar_cli: null,
     utilidad: null,
-    precio_venta: null
+    precio_venta: null,
+    link_serv: null,
+    reporte_fis: null,
+    fact_rem: null,
+    link_fact: null,
+    pagado_cliente: null,
+    pagado_tecnico: null
   }
   constructor(private navService: NavService, private router: Router) { }
   

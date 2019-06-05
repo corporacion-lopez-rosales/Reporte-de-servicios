@@ -2,6 +2,7 @@ import { Opcion, ReporteServicio } from "./opciones";
 import { NgModel } from '@angular/forms';
 import { ArrayType } from '@angular/compiler';
 import { DashboardComponent } from "./dashboard/dashboard.component";
+import { shiftInitState } from '@angular/core/src/view';
 
 
 export const opciones: Opcion[] =[
@@ -17,6 +18,22 @@ export const Cliente: Opcion[] = [
     { id: 1, name: 'Mala' },
     { id: 2, name: 'Buena' },
     { id: 3, name: 'Exelente' }
+]
+
+export const Vendedores: Opcion[] = [
+    {id: 1, name: 'Jorge Luis Jimenez'},
+    {id: 2, name: 'Rogelio Lopez'},
+    {id: 3, name: 'Eduardo Perez'},
+    {id: 4, name: 'Antonio Rojo'},
+    {id: 5, name: 'Jesus Lopez'}
+]
+
+export const Tecnicos: Opcion[] = [
+    {id: 1, name: 'Sergio Rodriguez'},
+    {id: 2, name: 'Alejandro García'},
+    {id: 3, name: 'Alejandro Vega'},
+    {id: 4, name: 'Javier Torres'},
+    {id: 5, name: 'Carlos Ferriño'}
 ]
 
 //console.log(DashboardComponent);

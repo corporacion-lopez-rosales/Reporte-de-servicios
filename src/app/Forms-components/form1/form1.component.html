@@ -49,7 +49,11 @@
           <input matInput placeholder="Cantidad de revisiones que lleva" [(ngModel)]="art.revisiones" name="name6">
         </mat-form-field>
 <mat-form-field class="example-full-width col-5">
-  <input matInput placeholder="Vendedor" [(ngModel)]="art.vendedor" name="name70">
+  <mat-select placeholder="Vendedor" [(ngModel)]="art.vendedor" name="name55">
+    <mat-option *ngFor="let opcion of opc_vendedores" [value]="opcion.name">
+      {{opcion.name}}
+    </mat-option>
+  </mat-select>
 </mat-form-field>
         <mat-form-field class="example-full-width col-4">
           <input matInput placeholder="Consecutivo" [(ngModel)]="art.consecutivo" name="name7">
@@ -133,8 +137,12 @@
       <div class="col-8 formulario justify-content-around" >
         <form class="form-group ">
         <div class="row justify-content-between">
-          <mat-form-field class="example-full-width col-5 mb-1">
-            <input matInput placeholder="Nombre del provedor de servicio" [(ngModel)]="art.nombre_prov" name="name22" value="">
+          <mat-form-field class="example-full-width col-5">
+            <mat-select placeholder="Tecnico" [(ngModel)]="art.nombre_prov" name="name556">
+              <mat-option *ngFor="let opcion of opc_tecnicos" [value]="opcion.name">
+                {{opcion.name}}
+              </mat-option>
+            </mat-select>
           </mat-form-field>
           <mat-form-field class="example-full-width col-5 mb-1">
             <input matInput placeholder="Pendiente"  name="name220" value="">
@@ -181,7 +189,47 @@
           </div>
         </div>
     </div>
-    
+
+
+
+    <div  class="pt-2 pb-2 borde-top">
+      <div class="row justify-content-center pt-2 " >
+        <div class="col-8 formulario justify-content-around" >
+            <form class="form-group ">
+              <div class="row justify-content-center">
+                <mat-form-field class="example-full-width col-4">
+                  <input matInput placeholder="Link SERV" [(ngModel)]="art.link_serv" name="namef1">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width col-4">
+                  <input matInput placeholder="Reporte fisico" [(ngModel)]="art.reporte_fis" name="namef2">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width col-4">
+                  <input matInput placeholder="Factura o remision" [(ngModel)]="art.fact_rem" name="namef3">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width col-4">
+                  <input matInput placeholder="Link FACT" [(ngModel)]="art.link_fact" name="namef4">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width col-4">
+                  <input matInput placeholder="Pagado por cliente" [(ngModel)]="art.pagado_cliente" name="namef5">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width col-4">
+                  <input matInput placeholder="Pagado al tecnico" [(ngModel)]="art.pagado_tecnico" name="namef6">
+                </mat-form-field>
+
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+
+
+
+
   <div class="col-8 formulario justify-content-around m-auto">
   <div class="row justify-content-between ">
     <div class="col-5 text-center " [className]="show1? 'ver' : 'col-5 text-center' ">

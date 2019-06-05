@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import {NavService} from '../../nav.service';
 import { Cliente } from "../../mock-opciones";
+import {Tecnicos} from "../../mock-opciones";
+import {Vendedores} from "../../mock-opciones";
+
+
 import {FormControl} from '@angular/forms';
 import { Observable } from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
@@ -14,13 +18,9 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class Form1Component implements OnInit {
 
-  cliente(){
-    console.log("hsavd");
-    alert("cliente nuevo");
-    var dateDay = new Date();
-    console.log(dateDay);
-    this.art.fecha_report=dateDay;
-  }
+ 
+   dateDay = new Date();
+
 
 
   longitud;
@@ -37,6 +37,9 @@ export class Form1Component implements OnInit {
 
   name;
   opc = Cliente;
+  opc_tecnicos= Tecnicos;
+  opc_vendedores= Vendedores;
+
   informacion=null;
   art={
     id: null,
@@ -61,7 +64,7 @@ export class Form1Component implements OnInit {
     falla: null,
     requisitos: null,
     fecha_promesa: null,
-    fecha_report: null,
+    fecha_report: this.dateDay,
     obs: null,
     nombre_prov: null,
     satisf_client: null,
@@ -71,7 +74,13 @@ export class Form1Component implements OnInit {
     costo_ref: null,
     costo_cobrar_cli: null,
     utilidad: null,
-    precio_venta: null
+    precio_venta: null,
+    link_serv: null,
+    reporte_fis: null,
+    fact_rem: null,
+    link_fact: null,
+    pagado_cliente: null,
+    pagado_tecnico: null
   }
   constructor(private navServicio: NavService, private router: Router) { }
   flag: boolean;
@@ -138,7 +147,13 @@ export class Form1Component implements OnInit {
         costo_ref: this.x.costo_ref,
         costo_cobrar_cli: this.x.costo_cobrar_cli,
         utilidad: this.x.utilidad,
-        precio_venta: this.x.precio_venta
+        precio_venta: this.x.precio_venta,
+        link_serv: this.x.link_serv,
+        reporte_fis: this.x.reporte_fis,
+        fact_rem: this.x.fact_rem,
+        link_fact: this.x.link_fact,
+        pagado_cliente: this.x.pagado_cliente,
+        pagado_tecnico: this.x.pagado_tecnico
       }
     }
 
