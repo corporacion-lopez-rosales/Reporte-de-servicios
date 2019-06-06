@@ -9,6 +9,9 @@ import * as $ from 'jquery';
 import { AppModule } from '../app.module';
 import { visitDslNode } from '@angular/animations/browser/src/util';
 import { Router } from '@angular/router';
+import {Form1Component} from '../Forms-components/form1/form1.component';
+import { NullTemplateVisitor } from '@angular/compiler';
+import { NullViewportScroller } from '@angular/common/src/viewport_scroller';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,7 +21,7 @@ import { Router } from '@angular/router';
 
 export class DashboardComponent implements OnInit {
 
-
+@ViewChild(Form1Component) Prueba:Form1Component;
   
 
 informacion: null;
@@ -77,6 +80,7 @@ informacion: null;
     console.log(x);
   }
 /*
+
 nuevo(){
   console.log("hola mundo");
   this.art ={
@@ -120,6 +124,15 @@ nuevo(){
     console.log(z);
   }
 
+  nuevo(){
+    console.log("el famosisimo reset");
+    /*let variable:string = "true";
+    localStorage.setItem("variable", variable);*/
+    
+    //this.router.navigate(['/home']);
+    location.replace("http://localhost:4200/home");
+  }
+
   eliminar(rep){
     this.dataSource = new UserDataSource(this.navService); //refresh
     console.log(rep.id);
@@ -133,6 +146,7 @@ nuevo(){
     alert("Se elimino correctamente");
     this.router.navigate(['']);
   }
+
 
 }
 

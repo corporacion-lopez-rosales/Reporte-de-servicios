@@ -4,7 +4,8 @@ import {NavService} from '../../nav.service';
 import { Cliente } from "../../mock-opciones";
 import {Tecnicos} from "../../mock-opciones";
 import {Vendedores} from "../../mock-opciones";
-
+import {fact_remision} from "../../mock-opciones";
+import {levanta_rep} from "../../mock-opciones";
 
 import {FormControl} from '@angular/forms';
 import { Observable } from 'rxjs';
@@ -20,7 +21,7 @@ export class Form1Component implements OnInit {
 
  
 
-   dateDay = new Date();
+  dateDay = new Date();
 
 
 
@@ -40,6 +41,8 @@ export class Form1Component implements OnInit {
   opc = Cliente;
   opc_tecnicos= Tecnicos;
   opc_vendedores= Vendedores;
+  opc_fact_r=fact_remision;
+  opc_levanta = levanta_rep;
 
   informacion=null;
   art={
@@ -100,15 +103,28 @@ export class Form1Component implements OnInit {
     this.router.navigate(['']);
   }
   
+  total_cliente(){
+    //this.art.costo_cobrar_cli=this.art.costo_client;
+    //console.log("xd");
+    this.art.costo_client;
+    console.log(this.art.costo_client);
+    this.art.costo_cobrar_cli = this.art.costo_client + this.art.costo_ref;
+    console.log(this.art.costo_cobrar_cli);
+  }
 
-  
-
+  total_precio(){
+    this.art.precio_venta = this.art.costo_cobrar_cli / this.art.utilidad;
+    console.log(this.art.precio_venta);
+    var xxxx=this.art.precio_venta.toFixed(2);
+    this.art.precio_venta=xxxx;
+  }
 
   ngOnInit() {
-    
+    //this.total1();
      this.x = this.navServicio.showDatos2();
      console.log(this.x);
     this.flag = this.navServicio.showDatos();
+    
     if(this.flag){
       this.show = false;
       this.show1 = true;
@@ -157,9 +173,6 @@ export class Form1Component implements OnInit {
         pagado_tecnico: this.x.pagado_tecnico
       }
     }
-
-    
-
     this.navServicio.autocomplete().subscribe(datos=>{
       
       console.log(datos);
@@ -204,6 +217,8 @@ export class Form1Component implements OnInit {
     );
 
     this.xdd();
+
+
 }
 
 
@@ -243,7 +258,9 @@ export class Form1Component implements OnInit {
 
   }
 
- 
+ NuevoRegistro(){
+   this.art=null;
+ }
 
 
   hayRegistros() {

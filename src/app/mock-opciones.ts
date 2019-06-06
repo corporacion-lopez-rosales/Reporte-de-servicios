@@ -36,6 +36,20 @@ export const Tecnicos: Opcion[] = [
     {id: 5, name: 'Carlos Ferriño'}
 ]
 
+export const fact_remision: Opcion[] = [
+    {id: 1, name: 'Si'},
+    {id: 2, name: 'No'},
+    {id: 3, name: 'N/A'},
+    {id: 4, name: 'A/G'},
+    {id: 5, name: 'Remision'}
+]
+
+export const levanta_rep: Opcion[] = [
+    {id: 1, name: 'Jesus Lopez'},
+    {id: 2, name: 'Alejandro Marquez'},
+    {id: 3, name: 'Antonio Rojo'},
+    {id: 4, name: 'Eduardo Perez'}
+]
 //console.log(DashboardComponent);
 
 export const Table_Reportes: ReporteServicio[] = [
