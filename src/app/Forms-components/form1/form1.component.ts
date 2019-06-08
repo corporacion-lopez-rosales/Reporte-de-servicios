@@ -6,6 +6,7 @@ import {Tecnicos} from "../../mock-opciones";
 import {Vendedores} from "../../mock-opciones";
 import {fact_remision} from "../../mock-opciones";
 import {levanta_rep} from "../../mock-opciones";
+import {status} from "../../mock-opciones";
 
 import {FormControl} from '@angular/forms';
 import { Observable } from 'rxjs';
@@ -43,6 +44,7 @@ export class Form1Component implements OnInit {
   opc_vendedores= Vendedores;
   opc_fact_r=fact_remision;
   opc_levanta = levanta_rep;
+  opc_status = status;
 
   informacion=null;
   art={
@@ -84,7 +86,8 @@ export class Form1Component implements OnInit {
     fact_rem: null,
     link_fact: null,
     pagado_cliente: null,
-    pagado_tecnico: null
+    pagado_tecnico: null,
+    status: null
   }
   constructor(private navServicio: NavService, private router: Router) { }
   flag: boolean;
@@ -170,7 +173,8 @@ export class Form1Component implements OnInit {
         fact_rem: this.x.fact_rem,
         link_fact: this.x.link_fact,
         pagado_cliente: this.x.pagado_cliente,
-        pagado_tecnico: this.x.pagado_tecnico
+        pagado_tecnico: this.x.pagado_tecnico,
+        status: this.x.status
       }
     }
     this.navServicio.autocomplete().subscribe(datos=>{

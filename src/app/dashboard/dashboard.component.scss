@@ -5,6 +5,7 @@
     
 }
 .body{
+    
     border-left: 2px solid black;
     border-right: 2px solid black;
     height: 100%;
@@ -24,7 +25,7 @@
     justify-content: center;
 }
 .mat-delete:hover{
-        transition: .3s;
+    transition: .3s;
     background: red;
     color: white;
 }
@@ -33,3 +34,7 @@
      background: #ffdf00;
   color: white;
 }
+
+
+
+

@@ -50,6 +50,11 @@ export const levanta_rep: Opcion[] = [
     {id: 3, name: 'Antonio Rojo'},
     {id: 4, name: 'Eduardo Perez'}
 ]
+
+export const status: Opcion[] = [
+    {id: 1, name: 'PENDIENTE'},
+    {id: 2, name: 'CERRADO'}
+]
 //console.log(DashboardComponent);
 
 export const Table_Reportes: ReporteServicio[] = [

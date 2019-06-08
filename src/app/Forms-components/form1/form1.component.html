@@ -153,9 +153,15 @@
               </mat-option>
             </mat-select>
           </mat-form-field>
-          <mat-form-field class="example-full-width col-5 mb-1">
-            <input matInput placeholder="status"  name="name220" value="">
+
+          <mat-form-field class="example-full-width col-5">
+            <mat-select placeholder="Status" [(ngModel)]="art.status" name="name556">
+              <mat-option *ngFor="let opcion of opc_status" [value]="opcion.name">
+                {{opcion.name}}
+              </mat-option>
+            </mat-select>
           </mat-form-field>
+
           <mat-form-field class="col-5" >
             <mat-select placeholder="Satisfaccion del cliente" [(ngModel)]="art.satisf_client" name="name23">
               <mat-option *ngFor="let opcion of opc" [value]="opcion.name">
@@ -228,15 +234,15 @@
 
                 <div class="col-5 py-1 mt-1 border border-dark rounded " >
                   <label class="d-block" for="checkbox1_value">Pagado al cliente</label>
-                  <mat-radio-group  [(ngModel)]="art.pagado_cliente" name="name8">
+                  <mat-radio-group  [(ngModel)]="art.pagado_cliente" name="namef5">
                     <mat-radio-button value="1">Si</mat-radio-button><br>
                     <mat-radio-button value="2">No</mat-radio-button><br>
                   </mat-radio-group>
                 </div>
 
                 <div class="col-5 py-1 mt-1 border border-dark rounded " >
-                  <label class="d-block" for="checkbox1_value">Pagado al tecnico</label>
-                  <mat-radio-group  [(ngModel)]="art.pagado_tecnico" name="name8">
+                  <label class="d-block" for="checkbox2_value">Pagado al tecnico</label>
+                  <mat-radio-group  [(ngModel)]="art.pagado_tecnico" name="namef6">
                     <mat-radio-button value="1">Si</mat-radio-button><br>
                     <mat-radio-button value="2">No</mat-radio-button><br>
                   </mat-radio-group>
