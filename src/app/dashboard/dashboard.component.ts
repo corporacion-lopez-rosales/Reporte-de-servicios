@@ -130,7 +130,8 @@ nuevo(){
     localStorage.setItem("variable", variable);*/
     
     //this.router.navigate(['/home']);
-    location.replace("http://localhost:4200/home");
+    //http://localhost:4200/home
+    location.replace("http://servitek.clrswap.com/home");
   }
 
   eliminar(rep){
