@@ -1,0 +1,272 @@
+<div class="body container ">
+  <div class="title row justify-content-center pt-3">
+    <h2>LEVANTAMIENTO</h2>
+  </div>
+  
+  <!-- <div class="content row">
+    <button>Buscar cliente</button>
+  </div> -->
+
+
+<form>
+
+  <div class="row justify-content-center pb-2 ">
+    <div class="col-8 formulario justify-content-around">
+      <form class="form-group ">
+        <div class="row justify-content-between">
+         
+                    <mat-form-field class="example-full-width col-12">
+            <input id="contacto_1" type="text" placeholder="Contacto" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto"  [(ngModel)]="art.contacto"  >
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="xdd()">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          
+          <mat-form-field class="example-full-width col-12">
+            <input matInput placeholder="Nombre Cliente" value="" [(ngModel)]="art.nombre_cliente" name="name1">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width col-5">
+            <input matInput placeholder="Tel. Oficina" value="" [(ngModel)]="art.telefono" name="name2">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-12">
+            <input matInput placeholder="Direccion" value="" [(ngModel)]="art.direccion" name="name3">
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-12">
+            <input matInput placeholder="Correo" value="" [(ngModel)]="art.correo" name="name4">
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div  class="pb-2 pt-2 borde-top">
+    <div class="row justify-content-center ">
+  <div class="col-8 formulario justify-content-around">
+    <form class="form-group ">
+      <div class="row justify-content-between d-flex  ">
+        <mat-form-field class="example-full-width col-4">
+          <input matInput placeholder="No. Reportes Anteriores" value="" [(ngModel)]="art.report_ant" name="name5">
+        </mat-form-field>
+         <mat-form-field class="example-full-width col-4">
+          <input matInput placeholder="Cantidad de revisiones que lleva" [(ngModel)]="art.revisiones" name="name6">
+        </mat-form-field>
+<mat-form-field class="example-full-width col-5">
+  <mat-select placeholder="Vendedor" [(ngModel)]="art.vendedor" name="name55">
+    <mat-option *ngFor="let opcion of opc_vendedores" [value]="opcion.name">
+      {{opcion.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+        <mat-form-field class="example-full-width col-4">
+          <input matInput placeholder="Consecutivo" [(ngModel)]="art.consecutivo" name="name7">
+        </mat-form-field>
+      </div>
+      <div class="row justify-content-between ">
+        <div class="col-5 py-1 mt-1 border border-dark rounded " >
+          <label class="d-block" for="checkbox1_value">Le vendimos nosotros el equipo</label>
+          <mat-radio-group  [(ngModel)]="art.venta_equipo" name="name8">
+            <mat-radio-button value="1">Si</mat-radio-button><br>
+            <mat-radio-button value="2">No</mat-radio-button><br>
+          </mat-radio-group>
+        </div>
+        <div class="col-5 py-1 mt-1 border border-dark rounded " >
+          <label class="d-block" for="">Le instalamos nosotros el equipo</label>
+         <mat-radio-group   [(ngModel)]="art.instalacion" name="name9">
+            <mat-radio-button value="1">Si</mat-radio-button><br>
+            <mat-radio-button value="2">No</mat-radio-button><br>
+          </mat-radio-group>
+        </div>
+        <div class="col-5 py-1 mt-1 border border-dark rounded " >
+          <label for="" class="d-block" >Garantia</label>
+          <mat-radio-group [(ngModel)]="art.garantia" name="name10">
+            <mat-radio-button value="1">Si</mat-radio-button><br>
+            <mat-radio-button value="2">No</mat-radio-button><br>
+          </mat-radio-group>
+        </div>
+        <div class="col-5 py-1 mt-1 border border-dark rounded " >
+          <label for="" class="d-block" >Nivel de molestia</label>
+         <mat-radio-group [(ngModel)]="art.nivel_molestia" name="name11">
+            <mat-radio-button value="1">Nada</mat-radio-button><br>
+            <mat-radio-button value="2">Poco</mat-radio-button><br>
+            <mat-radio-button value="3">Mucho</mat-radio-button><br>
+          </mat-radio-group>
+        </div>
+      </div>
+      <div class="row pt-1 justify-content-between">
+        <mat-form-field class="example-full-width col-3 mb-1">
+          <input matInput placeholder="Marca" value="" [(ngModel)]="art.marca" name="name12">
+        </mat-form-field>
+        <mat-form-field class="example-full-width col-3 mb-1">
+          <input matInput placeholder="Serie"  value="" [(ngModel)]="art.serie" name="name13">
+        </mat-form-field>
+        <mat-form-field class="example-full-width col-3 mb-1">
+          <input matInput placeholder="Modelo de equipo" value="" [(ngModel)]="art.modelo" name="name14">
+        </mat-form-field>
+        <mat-form-field class="example-full-width col-4 mb-1">
+          <input matInput placeholder="Descripcion del equipo" value="" [(ngModel)]="art.desc_equipo" name="name15">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width col-5">
+          <mat-select placeholder="Levanta el reporte" [(ngModel)]="art.levanta_report" name="name16">
+            <mat-option *ngFor="let opcion of opc_levanta" [value]="opcion.name">
+              {{opcion.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+          
+        <mat-form-field class="example-full-width col-5 mb-1">
+          <input matInput placeholder="Falla del reporte del cliente" value="" [(ngModel)]="art.falla" name="name17" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width col-6 mb-1">
+          <input matInput placeholder="Requisitos para dar el servicio" value="" [(ngModel)]="art.requisitos" name="name18">
+        </mat-form-field>
+        <mat-form-field class="example-full-width col-5 mb-1 ">
+          <input matInput [matDatepicker]="picker" placeholder="Fecha promesa" [(ngModel)]="art.fecha_promesa" name="name19">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-5 mb-1 ">
+            <input matInput [matDatepicker]="pick" placeholder="Fecha Reporte" [(ngModel)]="art.fecha_report" name="name20">
+            <mat-datepicker-toggle matSuffix [for]="pick"></mat-datepicker-toggle>
+            <mat-datepicker #pick></mat-datepicker>
+          </mat-form-field>
+          
+           <mat-form-field class="example-full-width col-12 mb-1">
+            <input matInput placeholder="Obs"  [(ngModel)]="art.obs" name="name21">
+          </mat-form-field>
+      </div>
+    </form>
+  </div>
+</div>
+  </div>
+  <div  class="pt-2 pb-2 borde-top">
+    <div class="row justify-content-center pt-2 " >
+      <div class="col-8 formulario justify-content-around" >
+        <form class="form-group ">
+        <div class="row justify-content-between">
+          <mat-form-field class="example-full-width col-5">
+            <mat-select placeholder="Tecnico" [(ngModel)]="art.nombre_prov" name="name556">
+              <mat-option *ngFor="let opcion of opc_tecnicos" [value]="opcion.name">
+                {{opcion.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width col-5">
+            <mat-select placeholder="Status" [(ngModel)]="art.status" name="name556">
+              <mat-option *ngFor="let opcion of opc_status" [value]="opcion.name">
+                {{opcion.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="col-5" >
+            <mat-select placeholder="Satisfaccion del cliente" [(ngModel)]="art.satisf_client" name="name23">
+              <mat-option *ngFor="let opcion of opc" [value]="opcion.name">
+                {{opcion.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-12">
+            <textarea matInput placeholder="Descripción del reporte de servicio de lo que se hizo y esta descripción se usa para facturar el servicio al cliente"  [(ngModel)]="art.descripcion" name="name24"></textarea>
+          </mat-form-field>
+          <mat-form-field class="example-full-width col-12" >
+            <textarea matInput placeholder="Diagnostico del tecnico"  [(ngModel)]="art.diagnostico" name="name25"></textarea>
+          </mat-form-field>
+        </div>
+      </form>
+      </div>
+    </div>
+    <div >
+      <div class="row justify-content-center pt-2 ">
+        <div class="col-8 formulario justify-content-between">
+            <form class="form-group ">
+              <div class="row justify-content-center">
+                 <mat-form-field class="example-full-width col-5 mb-1">
+                    <input matInput type="number" placeholder="Cuanto nos cobro el cliente" (keyup)="total_cliente()" value="" [(ngModel)]="art.costo_client" name="name26">
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width col-5 mb-1">
+                    <input matInput type="number" placeholder="Costo de refacciones" value="" (keyup)="total_cliente()" [(ngModel)]="art.costo_ref" name="name27">
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width col-5 mb-1">
+                    <input matInput type="number"  placeholder="Costo total para cobrar al cliente" value=""  [(ngModel)]="art.costo_cobrar_cli" name="name28">
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width col-5 mb-1">
+                    <input matInput type="number" placeholder="Utilidad" value="" (keyup)="total_precio()" [(ngModel)]="art.utilidad" name="name29">
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width col-5 mb-1">
+                    <input matInput type="number" placeholder="Precio de venta al cliente" value="" [(ngModel)]="art.precio_venta" name="name30">
+                  </mat-form-field>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+
+
+
+    <div  class="pt-2 pb-2 borde-top">
+      <div class="row justify-content-center pt-2 " >
+        <div class="col-8 formulario justify-content-around" >
+            <form class="form-group ">
+              <div class="row justify-content-center">
+                <mat-form-field class="example-full-width col-4">
+                  <input matInput placeholder="Link SERV" [(ngModel)]="art.link_serv" name="namef1">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width col-4">
+                  <input matInput placeholder="Reporte fisico" [(ngModel)]="art.reporte_fis" name="namef2">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width col-5">
+                  <mat-select placeholder="Factura o remision" [(ngModel)]="art.fact_rem" name="namef3">
+                    <mat-option *ngFor="let opcion of opc_fact_r" [value]="opcion.name">
+                      {{opcion.name}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width col-4">
+                  <input matInput placeholder="Link FACT" [(ngModel)]="art.link_fact" name="namef4">
+                </mat-form-field>
+
+                <div class="col-5 py-1 mt-1 border border-dark rounded " >
+                  <label class="d-block" for="checkbox1_value">Pagado al cliente</label>
+                  <mat-radio-group  [(ngModel)]="art.pagado_cliente" name="namef5">
+                    <mat-radio-button value="1">Si</mat-radio-button><br>
+                    <mat-radio-button value="2">No</mat-radio-button><br>
+                  </mat-radio-group>
+                </div>
+
+                <div class="col-5 py-1 mt-1 border border-dark rounded " >
+                  <label class="d-block" for="checkbox2_value">Pagado al tecnico</label>
+                  <mat-radio-group  [(ngModel)]="art.pagado_tecnico" name="namef6">
+                    <mat-radio-button value="1">Si</mat-radio-button><br>
+                    <mat-radio-button value="2">No</mat-radio-button><br>
+                  </mat-radio-group>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+
+
+
+
+  <div class="col-8 formulario justify-content-around m-auto">
+  <div class="row justify-content-between ">
+    <div class="col-5 text-center " >
+      <button class="btn btn-outline-danger" (click)="create_user()">Guardar</button>
+    </div>
+
+    <div class="col-5 text-center ">
+      <button id="p_auto" class="btn btn-outline-danger" >Cancelar</button>
+    </div>
+  </div>
+  </div>
+</div>
+</form>

@@ -1,0 +1,26 @@
+.input{
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.body{
+  background: #f2f2f2;
+        border-right: 2px solid;
+        /* box-shadow: 5px 1px 5px 1px #888888; */
+        border-left: 2px solid #1a1a1a;
+}
+.form-control:focus {
+  border-color: #FF0000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.custom-select:focus {
+  border-color: #FF0000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+.borde-top {
+  border-top: 1px solid;
+}
+
+.ver{
+  display: none;
+}

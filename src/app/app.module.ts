@@ -18,6 +18,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {NavService} from './nav.service';
 import {MatAutocompleteModule} from '@angular/material';
 
+import { Nuevo2Component } from './Forms-components/nuevo2/nuevo2.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import {MatAutocompleteModule} from '@angular/material';
     ModolutecnicoComponent,
     ModulocostoyfacturaComponent,
     SideNavComponent,
-    DashboardComponent
+    DashboardComponent,
+    Nuevo2Component
   ],
   imports: [
     MatPaginatorModule,
