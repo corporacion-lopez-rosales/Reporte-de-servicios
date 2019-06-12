@@ -60,34 +60,34 @@
   </mat-select>
 </mat-form-field>
         <mat-form-field class="example-full-width col-4">
-          <input matInput placeholder="Consecutivo" [(ngModel)]="art.consecutivo" name="name7">
+          <input matInput placeholder="Consecutivo" [(ngModel)]="art.consecutivo" name="name7" required>
         </mat-form-field>
       </div>
       <div class="row justify-content-between ">
         <div class="col-5 py-1 mt-1 border border-dark rounded " >
           <label class="d-block" for="checkbox1_value">Le vendimos nosotros el equipo</label>
-          <mat-radio-group  [(ngModel)]="art.venta_equipo" name="name8">
+          <mat-radio-group  [(ngModel)]="art.venta_equipo" name="name8" required>
             <mat-radio-button value="1">Si</mat-radio-button><br>
             <mat-radio-button value="2">No</mat-radio-button><br>
           </mat-radio-group>
         </div>
         <div class="col-5 py-1 mt-1 border border-dark rounded " >
           <label class="d-block" for="">Le instalamos nosotros el equipo</label>
-         <mat-radio-group   [(ngModel)]="art.instalacion" name="name9">
+         <mat-radio-group   [(ngModel)]="art.instalacion" name="name9" required>
             <mat-radio-button value="1">Si</mat-radio-button><br>
             <mat-radio-button value="2">No</mat-radio-button><br>
           </mat-radio-group>
         </div>
         <div class="col-5 py-1 mt-1 border border-dark rounded " >
           <label for="" class="d-block" >Garantia</label>
-          <mat-radio-group [(ngModel)]="art.garantia" name="name10">
+          <mat-radio-group [(ngModel)]="art.garantia" name="name10" required>
             <mat-radio-button value="1">Si</mat-radio-button><br>
             <mat-radio-button value="2">No</mat-radio-button><br>
           </mat-radio-group>
         </div>
         <div class="col-5 py-1 mt-1 border border-dark rounded " >
           <label for="" class="d-block" >Nivel de molestia</label>
-         <mat-radio-group [(ngModel)]="art.nivel_molestia" name="name11">
+         <mat-radio-group [(ngModel)]="art.nivel_molestia" name="name11" required>
             <mat-radio-button value="1">Nada</mat-radio-button><br>
             <mat-radio-button value="2">Poco</mat-radio-button><br>
             <mat-radio-button value="3">Mucho</mat-radio-button><br>
@@ -105,7 +105,7 @@
           <input matInput placeholder="Modelo de equipo" value="" [(ngModel)]="art.modelo" name="name14">
         </mat-form-field>
         <mat-form-field class="example-full-width col-4 mb-1">
-          <input matInput placeholder="Descripcion del equipo" value="" [(ngModel)]="art.desc_equipo" name="name15">
+          <input matInput placeholder="Descripcion del equipo" value="" [(ngModel)]="art.desc_equipo" name="name15" required>
         </mat-form-field>
 
         <mat-form-field class="example-full-width col-5">
@@ -120,15 +120,15 @@
           <input matInput placeholder="Falla del reporte del cliente" value="" [(ngModel)]="art.falla" name="name17" >
         </mat-form-field>
         <mat-form-field class="example-full-width col-6 mb-1">
-          <input matInput placeholder="Requisitos para dar el servicio" value="" [(ngModel)]="art.requisitos" name="name18">
+          <input matInput placeholder="REQUISITOS PARA DAR EL SERVICIO" value="" [(ngModel)]="art.requisitos" name="name18" required>
         </mat-form-field>
         <mat-form-field class="example-full-width col-5 mb-1 ">
-          <input matInput [matDatepicker]="picker" placeholder="Fecha promesa" [(ngModel)]="art.fecha_promesa" name="name19">
+          <input matInput [matDatepicker]="picker" placeholder="Fecha promesa" [(ngModel)]="art.fecha_promesa" name="name19" required>
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
           <mat-form-field class="example-full-width col-5 mb-1 ">
-            <input matInput [matDatepicker]="pick" placeholder="Fecha Reporte" [(ngModel)]="art.fecha_report" name="name20">
+            <input matInput [matDatepicker]="pick" placeholder="Fecha Reporte" [(ngModel)]="art.fecha_report" name="name20" required>
             <mat-datepicker-toggle matSuffix [for]="pick"></mat-datepicker-toggle>
             <mat-datepicker #pick></mat-datepicker>
           </mat-form-field>
@@ -147,7 +147,7 @@
         <form class="form-group ">
         <div class="row justify-content-between">
           <mat-form-field class="example-full-width col-5">
-            <mat-select placeholder="Tecnico" [(ngModel)]="art.nombre_prov" name="name556">
+            <mat-select placeholder="Tecnico" [(ngModel)]="art.nombre_prov" name="name556" required>
               <mat-option *ngFor="let opcion of opc_tecnicos" [value]="opcion.name">
                 {{opcion.name}}
               </mat-option>
@@ -217,7 +217,7 @@
                 </mat-form-field>
 
                 <mat-form-field class="example-full-width col-4">
-                  <input matInput placeholder="Reporte fisico" [(ngModel)]="art.reporte_fis" name="namef2">
+                  <input matInput placeholder="#Reporte fisico" [(ngModel)]="art.reporte_fis" name="namef2">
                 </mat-form-field>
 
                 <mat-form-field class="example-full-width col-5">
