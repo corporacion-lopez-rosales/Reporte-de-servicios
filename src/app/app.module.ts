@@ -19,6 +19,8 @@ import {NavService} from './nav.service';
 import {MatAutocompleteModule} from '@angular/material';
 
 import { Nuevo2Component } from './Forms-components/nuevo2/nuevo2.component';
+import { VerticalComponent } from './Forms-components/vertical/vertical.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { Nuevo2Component } from './Forms-components/nuevo2/nuevo2.component';
     ModulocostoyfacturaComponent,
     SideNavComponent,
     DashboardComponent,
-    Nuevo2Component
+    Nuevo2Component,
+    VerticalComponent,
+    
   ],
   imports: [
     MatPaginatorModule,
