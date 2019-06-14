@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as jsPDF from 'jspdf';
+import 'jspdf-autoTable';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
@@ -15,8 +16,10 @@ export class VerticalComponent implements OnInit {
   }
 
   dpdf(){
+    var uno="hola";
     const doc = new jsPDF();
     doc.text("hola xd", 10, 10);
+    
     doc.save('prueba.pdf');
   }
 
