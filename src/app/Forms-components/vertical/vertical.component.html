@@ -1,65 +1,140 @@
+<div id = "content"  #content>  
+  
+    <div  class = "alert alert-info" >  
+        <strong> Conversión de HTML a PDF: Angular 6 </strong>  
+    </div>  
+    <div>  
+      <input type = "button"  value = "CPTURE"  (click) = "captureScreen ()" />  
+    </div>
+    
+    
 
-  <button type="button" (click)="dpdf()"> ver pdf</button>
+</div>  
+<div  id="contentToConvert">  
+  
+    <div id="imagen_pdf" style="float: left; margin-top: 0%">  
+        <img src="assets/imagenes/servitek-logo-baja.png">
+        <div><b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   <a href="http://servitek.gastrotek.com.mx" target="a_blank" >www.clr.com.mx</a> </b></div>
+      </div>
 
-  <table id="basic-table" style="display: none;">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>First name</th>
-        <th>Last name</th>
-        <th>Email</th>
-        <th>Country</th>
-        <th>IP-address</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td align="right">1</td>
-        <td>Donna</td>
-        <td>Moore</td>
-        <td>dmoore0@furl.net</td>
-        <td>China</td>
-        <td>211.56.242.221</td>
-      </tr>
-      <tr>
-        <td align="right">2</td>
-        <td>Janice</td>
-        <td>Henry</td>
-        <td>jhenry1@theatlantic.com</td>
-        <td>Ukraine</td>
-        <td>38.36.7.199</td>
-      </tr>
-      <tr>
-        <td align="right">3</td>
-        <td>Ruth</td>
-        <td>Wells</td>
-        <td>rwells2@constantcontact.com</td>
-        <td>Trinidad and Tobago</td>
-        <td>19.162.133.184</td>
-      </tr>
-      <tr>
-        <td align="right">4</td>
-        <td>Jason</td>
-        <td>Ray</td>
-        <td>jray3@psu.edu</td>
-        <td>Brazil</td>
-        <td>10.68.11.42</td>
-      </tr>
-      <tr>
-        <td align="right">5</td>
-        <td>Jane</td>
-        <td>Stephens</td>
-        <td>jstephens4@go.com</td>
-        <td>United States</td>
-        <td>47.32.129.71</td>
-      </tr>
-      <tr>
-        <td align="right">6</td>
-        <td>Adam</td>
-        <td>Nichols</td>
-        <td>anichols5@com.com</td>
-        <td>Canada</td>
-        <td>18.186.38.37</td>
-      </tr>
-    </tbody>
-  </table>
+    <div style="float: right; text-align: right">
+        <div>San Bernardino No. 246 A</div>
+        <div>Col. Residencial Nueva California</div>
+        <div>Gral.Escobedo,Nuevo León CP. 66055</div>
+        <div> 83070147</div>
+        <div><a href="mailto:gvazquez.gastrotek@gmail.com">contacto@clr.com.mx</a></div>
+    </div>
+
+    <br><br><br><br><br><br>
+
+        <hr>
+        
+        <div style="position: relative; left: 40%;">
+        <h4>SOLICITUD DE SERVICIO</h4>
+      </div>
+        <br><br>
+   
+    <table class="table table-striped" >  
+        <tr>  
+          <th> Tipo de solicitud de servicio </th>  
+          <th> Revision y diagnostico para cotizar </th>  
+          
+        </tr>  
+        <tr>  
+          <td> CONSECUTIVO </td> 
+          <td> {{this.x.nombre_cliente}} </td>  
+        </tr>  
+        <tr>  
+          <td> No. DE CONSECUTIVOS ANTERIORES </td>
+          <td> CONSECUTIVO </td>   
+        </tr>  
+        <tr>  
+          <td> REVISIONES</td>   
+          <td> CONSECUTIVO </td> 
+        </tr>  
+        <tr>  
+          <td> NIVEL DE MOLESTIA </td>            
+          <td> CONSECUTIVO </td> 
+        </tr>  
+        <tr>  
+          <td> VENDIMOS NOSOTROS EL EQUIPO </td>  
+          <td> CONSECUTIVO </td> 
+        </tr>  
+        <tr>  
+          <td> INSTALAMOS NOSOTROS</td>  
+          <td> CONSECUTIVO </td> 
+        </tr>  
+        <tr>  
+          <td>  GARANTIA</td>     
+          <td> CONSECUTIVO </td>        
+        </tr>  
+        <tr>  
+          <td> LEVANTA REPORTE </td>
+          <td> CONSECUTIVO </td>   
+        </tr>  
+        <tr>  
+          <td> FECHA REPORTE</td> 
+          <td> CONSECUTIVO </td>  
+        </tr>  
+        <tr>  
+          <td> NOMBRE DEL CLIENTE </td>
+          <td> CONSECUTIVO </td>             
+        </tr>  
+        <tr>  
+          <td> CONTACTO </td>  
+          <td> CONSECUTIVO </td> 
+        </tr>  
+        <tr>  
+          <td> CORREO</td>  
+          <td> CONSECUTIVO </td> 
+        </tr>  
+        <tr>  
+          <td> TEL OFICINA O CELULAR </td>  
+          <td> CONSECUTIVO </td>           
+        </tr>  
+        <tr>  
+          <td> DIRECCION </td>  
+          <td> CONSECUTIVO </td> 
+        </tr>  
+        <tr>  
+          <td> GOOGLE MAPS</td>  
+          <td> CONSECUTIVO </td> 
+        </tr>  
+
+        <tr>  
+          <td> DESCRIPCION DEL EQUIPO</td>  
+          <td> CONSECUTIVO </td> 
+        </tr>  
+        <tr>  
+          <td> MARCA</td> 
+          <td> CONSECUTIVO </td>            
+        </tr>  
+        <tr>  
+          <td>MODELO </td>  
+          <td> CONSECUTIVO </td> 
+        </tr>  
+        <tr>  
+          <td> SERIE</td>  
+          <td> CONSECUTIVO </td> 
+        </tr>  
+
+        <tr>  
+          <td> FALLA REPORTA EL CLIENTE </td>  
+          <td> CONSECUTIVO </td> 
+        </tr>  
+        <tr>  
+          <td> REQUISITOS PARA DAR EL SERVICIO</td>            
+          <td> CONSECUTIVO </td> 
+        </tr>  
+        <tr>  
+          <td>FECHA PROMESA DEL SERVICIO </td>  
+          <td> CONSECUTIVO </td> 
+        </tr>  
+        <tr>  
+          <td> OBS</td>  
+          <td> CONSECUTIVO </td> 
+        </tr>  
+      </table>  
+      
+   
+</div>  
