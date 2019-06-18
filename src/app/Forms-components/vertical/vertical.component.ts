@@ -6,7 +6,9 @@ import { dashCaseToCamelCase } from '@angular/compiler/src/util';
 import html2canvas from 'html2canvas'; 
 import {MatCardModule} from '@angular/material/card'; 
 import {NavService} from '../../nav.service';
-
+import { Router } from '@angular/router';
+import { DomElementSchemaRegistry } from '@angular/compiler';
+import { borderRightWidth } from 'html2canvas/dist/types/css/property-descriptors/border-width';
 
 @Component({
   selector: 'app-vertical',
@@ -56,16 +58,20 @@ export class VerticalComponent implements OnInit {
     pagado_tecnico: null,
     status: null
   }
-  constructor(private navServicio: NavService) { }
+  constructor(private navServicio: NavService, private router: Router) { }
   flag: boolean;
   x;
   show:boolean = true;
   show1:boolean = false;
   selectedOpcion: string;
+  title = 'prueba90';
+  tipo_s = prompt("Tipo de solicitud de servicio", "Instalacion");
   ngOnInit() {
-
+    
+  
 
     
+
      //this.total1();
      this.x = this.navServicio.showDatos2();
      console.log(this.x);
@@ -75,8 +81,12 @@ export class VerticalComponent implements OnInit {
       this.show = false;
       this.show1 = true;
     }
+
+    
+    
     console.log(this.flag);
     if(this.flag){
+      console.log("entro xd 666");
       this.art = {
         id: this.x.id,
         nombre_cliente: this.x.nombre_cliente,
@@ -119,11 +129,10 @@ export class VerticalComponent implements OnInit {
         pagado_tecnico: this.x.pagado_tecnico,
         status: this.x.status
       }
-    }
-  }
 
-  public captureScreen()  
-  {  
+      console.log(this.art.diagnostico)
+    }
+
     var data = document.getElementById('contentToConvert');  
     html2canvas(data).then(canvas => {  
       // Few necessary setting options  
@@ -137,11 +146,18 @@ export class VerticalComponent implements OnInit {
       var position = 0;  
       pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, pageHeight)  
       //pdf.save('MYPdf.pdf'); // Generated PDF   
-      window.open(pdf.output('bloburl'), '_blank');//esta funciona sirve para abrir el pdf en una nueva pestaña, sino funciona, osea que lo abre y cierra rapidamente es porque tiene un boqueador de ventanas o anuncios
+      //window.open(pdf.output('bloburl'), '_blank');//esta funciona sirve para abrir el pdf en una nueva pestaña, sino funciona, osea que lo abre y cierra rapidamente es porque tiene un boqueador de ventanas o anuncios
     });
-    
-    
+  
+    //this.router.navigate(['']);
+  }
 
+  public captureScreen()  
+  {  
+
+    
+    
+    console.log("boton del pdf xd");
 
   }  
 }

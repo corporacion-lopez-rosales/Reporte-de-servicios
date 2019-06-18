@@ -1,16 +1,12 @@
+
+
+
 <div id = "content"  #content>  
   
-    <div  class = "alert alert-info" >  
-        <strong> Conversión de HTML a PDF: Angular 6 </strong>  
-    </div>  
-    <div>  
-      <input type = "button"  value = "CPTURE"  (click) = "captureScreen ()" />  
-    </div>
-    
     
 
 </div>  
-<div  id="contentToConvert">  
+<div  id="contentToConvert" style="background-color: white">  
   
     <div id="imagen_pdf" style="float: left; margin-top: 0%">  
         <img src="assets/imagenes/servitek-logo-baja.png">
@@ -33,106 +29,105 @@
         <h4>SOLICITUD DE SERVICIO</h4>
       </div>
         <br><br>
-   
+       
     <table class="table table-striped" >  
         <tr>  
-          <th> Tipo de solicitud de servicio </th>  
-          <th> Revision y diagnostico para cotizar </th>  
-          
+          <th> TIPO DE SOLICITUD DE SERVICIO </th>  
+          <th> {{ tipo_s }} </th>            
         </tr>  
         <tr>  
           <td> CONSECUTIVO </td> 
-          <td> {{this.x.nombre_cliente}} </td>  
+          <td > {{ x.consecutivo }} </td>  
         </tr>  
         <tr>  
           <td> No. DE CONSECUTIVOS ANTERIORES </td>
-          <td> CONSECUTIVO </td>   
+          <td>{{x.report_ant}}</td>   
         </tr>  
         <tr>  
           <td> REVISIONES</td>   
-          <td> CONSECUTIVO </td> 
+          <td> {{ x.revisiones }} </td> 
         </tr>  
         <tr>  
           <td> NIVEL DE MOLESTIA </td>            
-          <td> CONSECUTIVO </td> 
+          <td> {{ x.nivel_molestia }} </td> 
         </tr>  
         <tr>  
           <td> VENDIMOS NOSOTROS EL EQUIPO </td>  
-          <td> CONSECUTIVO </td> 
+          <td> {{ x.venta_equipo }} </td> 
         </tr>  
         <tr>  
           <td> INSTALAMOS NOSOTROS</td>  
-          <td> CONSECUTIVO </td> 
+          <td> {{ x.instalacion }} </td> 
         </tr>  
         <tr>  
           <td>  GARANTIA</td>     
-          <td> CONSECUTIVO </td>        
+          <td> {{ x.garantia }} </td>        
         </tr>  
         <tr>  
           <td> LEVANTA REPORTE </td>
-          <td> CONSECUTIVO </td>   
+          <td> {{ x.levanta_report }} </td>   
         </tr>  
         <tr>  
           <td> FECHA REPORTE</td> 
-          <td> CONSECUTIVO </td>  
+          <td> {{ x.fecha_report }} </td>  
         </tr>  
         <tr>  
           <td> NOMBRE DEL CLIENTE </td>
-          <td> CONSECUTIVO </td>             
+          <td> {{ x.nombre_cliente }} </td>             
         </tr>  
         <tr>  
           <td> CONTACTO </td>  
-          <td> CONSECUTIVO </td> 
+          <td> {{ x.contacto }} </td> 
         </tr>  
         <tr>  
           <td> CORREO</td>  
-          <td> CONSECUTIVO </td> 
+          <td> {{ x.correo }} </td> 
         </tr>  
         <tr>  
           <td> TEL OFICINA O CELULAR </td>  
-          <td> CONSECUTIVO </td>           
+          <td> {{ x.telefono }} </td>           
         </tr>  
         <tr>  
           <td> DIRECCION </td>  
-          <td> CONSECUTIVO </td> 
+          <td> {{ x.direccion }} </td> 
         </tr>  
         <tr>  
           <td> GOOGLE MAPS</td>  
-          <td> CONSECUTIVO </td> 
+          <td> trabajando </td> 
         </tr>  
 
         <tr>  
           <td> DESCRIPCION DEL EQUIPO</td>  
-          <td> CONSECUTIVO </td> 
+          <td> {{ x.desc_equipo }} </td> 
         </tr>  
         <tr>  
           <td> MARCA</td> 
-          <td> CONSECUTIVO </td>            
+          <td> {{ x.marca }} </td>            
         </tr>  
         <tr>  
           <td>MODELO </td>  
-          <td> CONSECUTIVO </td> 
+          <td> {{ x.modelo }} </td> 
         </tr>  
         <tr>  
           <td> SERIE</td>  
-          <td> CONSECUTIVO </td> 
+          <td> {{ x.serie }} </td> 
         </tr>  
 
         <tr>  
           <td> FALLA REPORTA EL CLIENTE </td>  
-          <td> CONSECUTIVO </td> 
+          <td> {{ x.falla }} </td> 
         </tr>  
         <tr>  
           <td> REQUISITOS PARA DAR EL SERVICIO</td>            
-          <td> CONSECUTIVO </td> 
+          <td> {{ x.requisitos }} </td> 
         </tr>  
         <tr>  
           <td>FECHA PROMESA DEL SERVICIO </td>  
-          <td> CONSECUTIVO </td> 
+          <td> {{ x.fecha_promesa }} </td> 
         </tr>  
         <tr>  
           <td> OBS</td>  
-          <td> CONSECUTIVO </td> 
+          <td> {{ x.obs }} </td> 
         </tr>  
       </table>  
       
