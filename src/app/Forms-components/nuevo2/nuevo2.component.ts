@@ -87,7 +87,8 @@ export class Nuevo2Component implements OnInit {
     link_fact: null,
     pagado_cliente: null,
     pagado_tecnico: null,
-    status: null
+    status: null,
+    link_drive: null
   }
   constructor(private navServicio: NavService, private router: Router) { }
   flag: boolean;

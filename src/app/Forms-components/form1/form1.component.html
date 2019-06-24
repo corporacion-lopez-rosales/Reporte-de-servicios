@@ -147,7 +147,7 @@
         <form class="form-group ">
         <div class="row justify-content-between">
           <mat-form-field class="example-full-width col-5">
-            <mat-select placeholder="Tecnico" [(ngModel)]="art.nombre_prov" name="name556">
+            <mat-select placeholder="Tecnico" [(ngModel)]="art.nombre_prov" name="name5566">
               <mat-option *ngFor="let opcion of opc_tecnicos" [value]="opcion.name">
                 {{opcion.name}}
               </mat-option>
@@ -247,6 +247,10 @@
                     <mat-radio-button value="NO">No</mat-radio-button><br>
                   </mat-radio-group>
                 </div>
+
+                <mat-form-field class="example-full-width col-4">
+                  <input matInput placeholder="Link drive fotos" [(ngModel)]="art.link_drive" name="name919">
+                </mat-form-field>
 
               </div>
             </form>

@@ -35,6 +35,7 @@ export class NavService {
   getForm(Reporte){
     this.Rep = Reporte;
   }
+  
    showDatos(){
      return this.flag;
    }

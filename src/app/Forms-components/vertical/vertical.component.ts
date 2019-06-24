@@ -129,7 +129,6 @@ export class VerticalComponent implements OnInit {
         pagado_tecnico: this.x.pagado_tecnico,
         status: this.x.status
       }
-
       console.log(this.art.diagnostico)
     }
 

@@ -13,6 +13,8 @@ import { Observable } from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import { Router, RouterLink } from '@angular/router';
 
+import * as moment from 'moment';
+
 @Component({
   selector: 'app-form1',
   templateUrl: './form1.component.html',
@@ -87,7 +89,8 @@ export class Form1Component implements OnInit {
     link_fact: null,
     pagado_cliente: null,
     pagado_tecnico: null,
-    status: null
+    status: null, 
+    link_drive: null
   }
   constructor(private navServicio: NavService, private router: Router) { }
   flag: boolean;
@@ -134,6 +137,15 @@ export class Form1Component implements OnInit {
     }
     console.log(this.flag);
     if(this.flag){
+      var fecha1=this.x.fecha_promesa;
+      let fechax1 = moment(fecha1).format('L');
+
+      var fecha2 = this.x.fecha_report;
+      let fechax2 = moment(fecha2).format('L');
+    
+      console.log(fechax1);
+      console.log(fechax2);
+
       this.art = {
         id: this.x.id,
         nombre_cliente: this.x.nombre_cliente,
@@ -174,7 +186,8 @@ export class Form1Component implements OnInit {
         link_fact: this.x.link_fact,
         pagado_cliente: this.x.pagado_cliente,
         pagado_tecnico: this.x.pagado_tecnico,
-        status: this.x.status
+        status: this.x.status, 
+        link_drive: this.x.link_drive
       }
     }
     this.navServicio.autocomplete().subscribe(datos=>{
