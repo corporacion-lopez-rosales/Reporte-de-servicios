@@ -245,15 +245,23 @@ export class Form1Component implements OnInit {
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
   
-  actualizar() {
-    
+  actualizar_boton() {    
     this.navServicio.actualizar(this.art).subscribe(datos => {
-      if (datos['resultado']=='OK') {
+      /*if (datos['resultado']=='OK') {
         alert(datos['mensaje']);
-      }
-    });
-    alert("Se edito correctamente");
-    this.router.navigate(['']);    
+
+      }*/
+
+
+    },
+    error=>{
+      
+      console.log(this.art);
+      console.log(<any>error)
+    }
+    );
+//alert("Se edito correctamente");
+    this.router.navigate(['']);
   }
 
   xdd(){
